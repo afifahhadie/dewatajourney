@@ -1,0 +1,159 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system Dewata Journey.
+ * Tema: Modern Tropical / Cinematic. Light mode saja.
+ * Semua warna memakai oklch, dikonversi dari tabel warna DESIGN.md.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-teal-deep: var(--teal-deep);
+  --color-footer: var(--footer);
+  --color-gold-text: var(--gold-text);
+  --color-whatsapp: var(--whatsapp);
+  --font-heading: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+:root {
+  --radius: 0.75rem;
+  /* Cream #FAF6F0 */
+  --background: oklch(0.9724 0.0084 86.05);
+  /* Dark text #1C1C1C */
+  --foreground: oklch(0.2045 0 0);
+  /* White */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2045 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2045 0 0);
+  /* Teal #1A5F7A */
+  --primary: oklch(0.4327 0.0807 218.76);
+  --primary-foreground: oklch(0.9724 0.0084 86.05);
+  /* Sand #F3EBDD */
+  --secondary: oklch(0.9365 0.0169 85.34);
+  --secondary-foreground: oklch(0.2045 0 0);
+  --muted: oklch(0.9365 0.0169 85.34);
+  /* Muted text #616161 */
+  --muted-foreground: oklch(0.4566 0 0);
+  /* Gold #D4944A */
+  --accent: oklch(0.6925 0.1142 66.44);
+  --accent-foreground: oklch(0.2045 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.9724 0.0084 86.05);
+  /* Border #E3D8C6 */
+  --border: oklch(0.8754 0.0236 85.56);
+  --input: oklch(0.8754 0.0236 85.56);
+  --ring: oklch(0.4327 0.0807 218.76);
+  /* Teal deep #134B60 */
+  --teal-deep: oklch(0.3577 0.0672 218.18);
+  /* Footer teal #0F3A4A */
+  --footer: oklch(0.2925 0.0536 217.62);
+  /* Gold text #9A5B16 */
+  --gold-text: oklch(0.4754 0.1059 63.86);
+  /* WhatsApp green #25D366 */
+  --whatsapp: oklch(0.7691 0.2006 149.58);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Animasi reveal saat section masuk layar */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 500ms ease,
+    transform 500ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Goyang pelan tombol WhatsApp floating */
+@keyframes wa-wiggle {
+  0%,
+  86%,
+  100% {
+    transform: rotate(0deg);
+  }
+  89% {
+    transform: rotate(-12deg);
+  }
+  92% {
+    transform: rotate(10deg);
+  }
+  95% {
+    transform: rotate(-6deg);
+  }
+  98% {
+    transform: rotate(3deg);
+  }
+}
+
+.wa-wiggle {
+  animation: wa-wiggle 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .wa-wiggle {
+    animation: none;
+  }
+
+  .wa-ping {
+    display: none;
+  }
+}
