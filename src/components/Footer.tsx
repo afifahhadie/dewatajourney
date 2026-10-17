@@ -64,7 +64,7 @@ export function Footer() {
 
       <div className="border-t border-background/15">
         <p className="mx-auto max-w-6xl px-4 py-5 text-center text-xs md:px-6">
-          © 2026 Dewata Journey. Website ini dibuat untuk keperluan tugas kuliah.
+          © 2026 Dewata Journey
         </p>
       </div>
     </footer>
