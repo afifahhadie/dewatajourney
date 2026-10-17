@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CalendarCheck, Car, MessageCircle, Ticket } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
-import hero from "@/assets/Hero.jpg";
+import hero from "@/assets/Hero2.jpg";
 import { CtaBanner } from "@/components/CtaBanner";
 import { PackageCard } from "@/components/PackageCard";
 import { PackageDialog } from "@/components/PackageDialog";
