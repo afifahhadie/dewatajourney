@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { FaWhatsapp } from "react-icons/fa";
 
-import headerImg from "@/assets/Nusa_Penida.jpg.asset.json";
+import headerImg from "@/assets/Nusa_Penida.jpg";
 import { PackageCard } from "@/components/PackageCard";
 import { PackageDialog } from "@/components/PackageDialog";
 import { PageHeader } from "@/components/PageHeader";
@@ -47,7 +47,7 @@ function PaketWisataPage() {
   return (
     <div ref={revealRef}>
       <PageHeader
-        image={headerImg.url}
+        image={headerImg}
         title="Paket Wisata"
         subtitle="Empat day trip pilihan di Bali. Harga per orang, sudah termasuk transport, guide, dan tiket masuk."
       />

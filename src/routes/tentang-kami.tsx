@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HeartHandshake, MapPin, Sparkles } from "lucide-react";
 
-import headerImg from "@/assets/Pura_Ulun_Danu_Bratan.jpg.asset.json";
+import headerImg from "@/assets/Pura_Ulun_Danu_Bratan.jpg";
 import { CtaBanner } from "@/components/CtaBanner";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -55,7 +55,7 @@ function TentangKamiPage() {
   return (
     <div ref={revealRef}>
       <PageHeader
-        image={headerImg.url}
+        image={headerImg}
         title="Tentang Kami"
         subtitle="Day trip di Bali, dibuat simpel."
       />
@@ -64,7 +64,7 @@ function TentangKamiPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-2 md:px-6">
           <div className="reveal overflow-hidden rounded-2xl">
             <img
-              src={headerImg.url}
+              src={headerImg}
               alt="Pura Ulun Danu Bratan di tepi danau Bedugul"
               loading="lazy"
               className="size-full object-cover"

@@ -1,7 +1,7 @@
-import nusaPenidaImg from "@/assets/Nusa_Penida.jpg.asset.json";
-import ulunDanuImg from "@/assets/Pura_Ulun_Danu_Bratan.jpg.asset.json";
-import kecakImg from "@/assets/Tari_Kecak_Uluwatu.jpg.asset.json";
-import penglipuranImg from "@/assets/Desa_Panglipuran.jpg.asset.json";
+import nusaPenidaImg from "@/assets/Nusa_Penida.jpg";
+import ulunDanuImg from "@/assets/Pura_Ulun_Danu_Bratan.jpg";
+import kecakImg from "@/assets/Tari_Kecak_Uluwatu.jpg";
+import penglipuranImg from "@/assets/Desa_Panglipuran.jpg";
 
 export type TourPackage = {
   id: string;
@@ -37,7 +37,7 @@ export const packages: TourPackage[] = [
     id: "nusa-penida",
     name: "Nusa Penida Island Tour",
     tagline: "Pantai tebing, laut biru, dan spot foto paling terkenal di Bali.",
-    image: nusaPenidaImg.url,
+    image: nusaPenidaImg,
     price: 550000,
     duration: "±12 jam (estimasi)",
     location: "Nusa Penida, Klungkung",
@@ -74,7 +74,7 @@ export const packages: TourPackage[] = [
     id: "ulun-danu-bratan",
     name: "Pura Ulun Danu Bratan",
     tagline: "Pura di tepi danau dengan udara sejuk khas Bedugul.",
-    image: ulunDanuImg.url,
+    image: ulunDanuImg,
     price: 350000,
     duration: "±10 jam (estimasi)",
     location: "Bedugul, Tabanan",
@@ -108,7 +108,7 @@ export const packages: TourPackage[] = [
     id: "kecak-uluwatu",
     name: "Tari Kecak Uluwatu",
     tagline: "Nonton tari Kecak dengan latar sunset di tebing Uluwatu.",
-    image: kecakImg.url,
+    image: kecakImg,
     price: 400000,
     duration: "±6 jam, berangkat sore (estimasi)",
     location: "Uluwatu, Badung",
@@ -144,7 +144,7 @@ export const packages: TourPackage[] = [
     id: "penglipuran",
     name: "Desa Penglipuran",
     tagline: "Desa adat yang rapi dan asri dengan rumah tradisional Bali.",
-    image: penglipuranImg.url,
+    image: penglipuranImg,
     price: 300000,
     duration: "±6 jam (estimasi)",
     location: "Bangli",

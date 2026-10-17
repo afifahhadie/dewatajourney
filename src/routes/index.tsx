@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CalendarCheck, Car, MessageCircle, Ticket } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
-import heroAsset from "@/assets/Hero.jpg.asset.json";
+import hero from "@/assets/Hero.jpg";
 import { CtaBanner } from "@/components/CtaBanner";
 import { PackageCard } from "@/components/PackageCard";
 import { PackageDialog } from "@/components/PackageDialog";
@@ -89,7 +89,7 @@ function HomePage() {
       {/* Hero: tinggi mengikuti layar, tulisan "BALI" tetap terlihat utuh */}
       <section className="relative overflow-hidden bg-footer pt-16 md:pt-[72px]">
           <img
-            src={heroAsset.url}
+            src={hero}
             alt="Pantai dan tebing di Bali dengan laut biru"
             className="absolute inset-0 h-full w-full object-cover object-[center_20%]"
           />

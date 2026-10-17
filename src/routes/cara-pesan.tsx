@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import headerImg from "@/assets/Desa_Panglipuran.jpg.asset.json";
+import headerImg from "@/assets/Desa_Panglipuran.jpg";
 import { CtaBanner } from "@/components/CtaBanner";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -94,7 +94,7 @@ function CaraPesanPage() {
   return (
     <div ref={revealRef}>
       <PageHeader
-        image={headerImg.url}
+        image={headerImg}
         title="Cara Pesan"
         subtitle="Tidak perlu daftar akun. Semua lewat WhatsApp."
       />

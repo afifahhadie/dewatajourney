@@ -3,7 +3,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
-import logoAsset from "@/assets/Logo.png.asset.json";
+import logo from "@/assets/Logo.png";
 import { buildWaLink, generalMessage } from "@/lib/whatsapp";
 import {
   Sheet,
@@ -33,7 +33,7 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:h-[72px] md:px-6">
         <Link to="/" aria-label="Dewata Journey, kembali ke beranda">
           <img
-            src={logoAsset.url}
+            src={logo}
             alt="Logo Dewata Journey"
             className="h-10 w-auto md:h-12"
           />

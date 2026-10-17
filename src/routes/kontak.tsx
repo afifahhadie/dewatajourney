@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Clock, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
-import headerImg from "@/assets/Tari_Kecak_Uluwatu.jpg.asset.json";
+import headerImg from "@/assets/Tari_Kecak_Uluwatu.jpg";
 import { PageHeader } from "@/components/PageHeader";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -92,7 +92,7 @@ function KontakPage() {
   return (
     <div ref={revealRef}>
       <PageHeader
-        image={headerImg.url}
+        image={headerImg}
         title="Kontak"
         subtitle="Tanya paket, jadwal, atau jemputan. Kami balas lewat WhatsApp."
       />
