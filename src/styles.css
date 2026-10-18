@@ -106,10 +106,11 @@
 /* Animasi reveal saat section masuk layar */
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(8px);
   transition:
-    opacity 500ms ease,
-    transform 500ms ease;
+    opacity 600ms ease-out,
+    transform 600ms ease-out;
+  contain: layout;
 }
 
 .reveal.is-visible {
