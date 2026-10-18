@@ -86,12 +86,12 @@ function HomePage() {
 
   return (
     <div ref={revealRef}>
-      {/* Hero: tinggi mengikuti layar, tulisan "BALI" tetap terlihat utuh */}
-      <section className="relative overflow-hidden bg-footer pt-16 md:pt-[72px]">
+      {/* Hero: tinggi mengikuti sisa layar di bawah navbar, gambar proporsional */}
+      <section className="relative overflow-hidden bg-footer min-h-[calc(100svh-64px)] md:min-h-[calc(100svh-72px)]">
           <img
             src={hero}
             alt="Pantai dan tebing di Bali dengan laut biru"
-            className="absolute inset-0 h-full w-full object-cover object-[center_20%]"
+            className="absolute inset-0 h-full w-full object-cover object-center"
           />
           <div
             className="absolute inset-0"
@@ -101,8 +101,8 @@ function HomePage() {
             }}
             aria-hidden="true"
           />
-          <div className="relative flex min-h-[85svh] flex-col md:min-h-[100svh]">
-          <div className="relative mx-auto mt-auto w-full max-w-6xl px-4 pb-16 pt-24 text-center md:px-6 md:pb-24 md:text-left">
+          <div className="relative flex h-full flex-col md:pt-6">
+          <div className="relative mx-auto w-full max-w-6xl px-4 pb-16 pt-12 text-center md:px-6 md:pb-24 md:text-left">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary-foreground drop-shadow-sm md:text-base">
               Bali Tour &amp; Travel
             </p>
