@@ -101,7 +101,7 @@ function HomePage() {
             }}
             aria-hidden="true"
           />
-          <div className="relative flex flex-1 flex-col md:pt-6">
+          <div className="relative flex flex-1 items-end md:pt-6 pb-12 md:pb-16">
           <div className="relative mx-auto w-full max-w-6xl px-4 pb-16 pt-12 text-center md:px-6 md:pb-24 md:text-left">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary-foreground drop-shadow-sm md:text-base">
               Bali Tour &amp; Travel
